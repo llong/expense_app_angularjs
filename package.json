@@ -9,13 +9,19 @@
     "start": "brunch watch --server",
     "build": "brunch build --production"
   },
-  "dependencies": {},
+  "dependencies": {
+    "angular": "^1.6.9",
+    "angular-route": "^1.6.10",
+    "bootstrap": "^4.1.0"
+  },
   "devDependencies": {
     "auto-reload-brunch": "^2",
-    "babel-brunch": "~6.0",
+    "babel-brunch": "^6.0.6",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-latest": "^6",
     "brunch": "^2",
-    "clean-css-brunch": "^2",
-    "uglify-js-brunch": "^2"
+    "cssnano-brunch": "^1.1.8",
+    "sass-brunch": "^2.10.4",
+    "uglify-js-brunch": "^2.10.0"
   }
 }

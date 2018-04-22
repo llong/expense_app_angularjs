@@ -6,9 +6,17 @@ exports.files = {
       'app.js': /^app/
     }
   },
-  stylesheets: {joinTo: 'app.css'}
+  stylesheets: {joinTo: {'app.css': /^app/}}
 };
 
 exports.plugins = {
-  babel: {presets: ['latest']}
+  babel: {presets: ['env']},
+  uglify: {
+      mangle: false,
+      compress: {
+        global_defs: {
+          DEBUG: true
+        }
+      }
+    }
 };

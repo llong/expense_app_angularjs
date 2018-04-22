@@ -1,0 +1,22 @@
+<div class="table-responsive">
+  <h3 class="mb-3">Expenses</h3>
+  <p>Sort by: {{ sortType }}</p>
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th ng-click="sortType = 'merchant';sortReverse = !sortReverse"><i class="far fa-building"></i> Merchant</th>
+        <th ng-click="sortType = 'amount';sortReverse = !sortReverse"><i class="far fa-credit-card"></i> Amount</th>
+        <th ng-click="sortType = 'date';sortReverse = !sortReverse"><i class="far fa-calendar-alt"></i> Date</th>
+        <th><i class="far fa-comment"></i> Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="expense in expenses | orderBy:sortType:sortReverse" ng-click="expenseDetail(expense.id)">
+        <td><span ng-if="expense.status === 'new'" class="badge badge-info">New</span> {{expense.merchant}}</td>
+        <td>{{expense.amount | currency}}</td>
+        <td>{{expense.date | date}}</td>
+        <td ng-class="expense.comments === '' ? 'text-muted' : ''">{{expense.comments | blankComment }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

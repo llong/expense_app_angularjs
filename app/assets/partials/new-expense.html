@@ -1,0 +1,23 @@
+<h1>Add Expense</h1>
+
+<form name="expenseForm" class="mt-5" ng-submit="addExpense(expense)">
+  <div class="form-group">
+    <label>Merchant name</label>
+    <input class="form-control" ng-model="expense.merchant" type="text" required/>
+  </div>
+  <div class="form-group">
+    <label>Expense amount</label>
+    <input class="form-control" ng-model="expense.amount" type="number"  required/>
+  </div>
+  <div class="form-group">
+    <label>Transaction Date</label>
+    <input class="form-control" ng-model="expense.date" type="date" required />
+  </div>
+  <div class="form-group">
+    <label>Comments (optional)</label>
+    <textarea class="form-control" ng-model="expense.comments" type="text" placeholder="Add comments here"></textarea>
+  </div>
+  <div class="form-group">
+    <button ng-disabled="expenseForm.$invalid" class="btn btn-lg btn-primary float-right">Add new expense</button>
+  </div>
+</form>

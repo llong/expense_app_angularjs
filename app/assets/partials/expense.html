@@ -1,0 +1,51 @@
+<div ng-controller="expenseCtrl">
+
+  <!-- show editing form if in editing mode -->
+  <div ng-show="editing">
+    <h1>{{expense.merchant}}</h1>
+    <form class="mt-5" ng-submit="updateExpense(expense)">
+      <div class="form-group">
+        <label>Merchant name</label>
+        <input class="form-control" ng-model="expense.merchant" type="text" placeholder="Google, Microsoft, Amazon..."/>
+      </div>
+      <div class="form-group">
+        <label>Expense amount</label>
+        <input class="form-control" value="'expense.amount'" ng-model="expense.amount" type="number"/>
+      </div>
+      <div class="form-group">
+        <label>Transaction Date</label>
+        <input class="form-control" ng-model="expense.date" type="date"/>
+      </div>
+      <div class="form-group">
+        <label>Comments</label>
+        <textarea class="form-control" ng-model="expense.comments" type="text" placeholder="Add comments here"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Expense Status</label>
+        <select ng-model="expense.status">
+          <option value="new">New</option>
+          <option value="reimbursed">Reimbursed</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-lg btn-primary float-right">Update expense</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Show details if editing mode is false -->
+  <div ng-show="!editing">
+    <h1>{{expense.merchant}}</h1>
+    <p>{{expense.date | date}}</p>
+    <h4>Amount: {{expense.amount | currency }}</h4>
+    <h4>Status: {{expense.status | capitalize}}</h4>
+    <h4 class="mt-5">Comments:</h4>
+    <p>{{expense.comments}} <span class="text-secondary" ng-show="expense.comments === ''">No comments provided</span></p>
+  </div>
+
+
+  <div class="mb-5">
+    <button class="btn btn-sm btn-outline-danger" ng-if="expense.status === 'new'" ng-click="removeExpense(expense)">Remove expense</button>
+    <button class="btn btn-sm btn-outline-success" ng-if="expense.status === 'new'" ng-click="editMode()">{{editing ? 'Close edit mode' : 'Edit expense'}}</button>
+  </div>
+</div>
