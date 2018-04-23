@@ -38,6 +38,18 @@ export const expensesFactory = function($location,$routeParams) {
           $location.path('/')
         }
       }
+    },
+    auth: function() {
+      let userCred = JSON.parse(localStorage.getItem("user")) || {};
+      if(userCred.username === "demo" && userCred.password === "demo"){
+        console.log('sucessfully logged in')
+      } else {
+        $location.path('/login')
+      }
+    },
+    logout: function() {
+      localStorage.removeItem("user")
+      $location.path('/login');
     }
   }
 }

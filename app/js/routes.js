@@ -4,6 +4,10 @@ export const routes = ($routeProvider,$locationProvider) => {
       templateUrl: '../partials/home.html',
       controller: 'mainCtrl'
     })
+    .when('/login', {
+      templateUrl: '../partials/login.html',
+      controller: 'loginCtrl'
+    })
     .when('/expense/:id', {
       templateUrl: '../partials/expense.html',
       controller: 'mainCtrl'
@@ -15,5 +19,5 @@ export const routes = ($routeProvider,$locationProvider) => {
     .otherwise({redirectTo:'/'})
 
     // Pretty URLs
-    $locationProvider.html5Mode({enabled:true})
+    //$locationProvider.html5Mode({enabled:true})
 }

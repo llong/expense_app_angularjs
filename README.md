@@ -1,28 +1,12 @@
-# Brunch + Babel/ES6
+# AngularJS Expense Application
 
-This is a modern JS skeleton for [Brunch](http://brunch.io).
+This application was built as a coding challenge for a front end developer position. The challenge was to build an expense tracking application using AngularJS with no backend. I built the app with some sample data coming from app/js/demoData.js. This demo data can be disabled by commenting out line 8 on app/js/controllers.js.
 
-## Installation
+## Running App
+To run the app you can either run a server within the public folder (or drag foler into your own project) or you can install brunch (npm install -g brunch) and run "brunch watch --server" in your terminal.
 
-Clone this repo manually or use `brunch new dir -s es6`
+## Tech Stack
 
-## Getting started
-
-* Install (if you don't have them):
-    * [Node.js](http://nodejs.org): `brew install node` on OS X
-    * [Brunch](http://brunch.io): `npm install -g brunch`
-    * Brunch plugins and app dependencies: `npm install`
-* Run:
-    * `npm start` — watches the project with continuous rebuild. This will also launch HTTP server with [pushState](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history).
-    * `npm run build` — builds minified project for production
-* Learn:
-    * `public/` dir is fully auto-generated and served by HTTP server.  Write your code in `app/` dir.
-    * Place static files you want to be copied from `app/assets/` to `public/`.
-    * [Brunch site](http://brunch.io), [Getting started guide](https://github.com/brunch/brunch-guide#readme)
-
-## ES-next
-
-To use proposed JS features not included into ES6, do this:
-
-* `npm install --save-dev babel-preset-stage-0`
-* in `brunch-config.js`, add the preset: `presets: ['latest', 'stage-0']`
+ - AngularJS 1.6
+ - Brunch Task Runner/bundler
+ - Bootstrap 4 Sass

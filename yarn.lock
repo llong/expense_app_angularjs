@@ -173,7 +173,7 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
-auto-reload-brunch@^2:
+auto-reload-brunch@^2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/auto-reload-brunch/-/auto-reload-brunch-2.7.1.tgz#6924cec0ac61128d1cd1ff8f2f9ba0f6e7f01bfe"
   dependencies:
@@ -199,7 +199,7 @@ aws4@^1.6.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.7.0.tgz#d4d0e9b9dbfca77bf08eeb0a8a471550fe39e289"
 
-babel-brunch@^6.0.6:
+babel-brunch@^6.1.1:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/babel-brunch/-/babel-brunch-6.1.1.tgz#0b9d04c1df12f66e76a4dbdee34d8734876f1877"
   dependencies:
@@ -652,7 +652,7 @@ babel-preset-es2017@^6.24.1:
     babel-plugin-syntax-trailing-function-commas "^6.22.0"
     babel-plugin-transform-async-to-generator "^6.24.1"
 
-babel-preset-latest@^6, babel-preset-latest@^6.22.0:
+babel-preset-latest@^6.22.0, babel-preset-latest@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-preset-latest/-/babel-preset-latest-6.24.1.tgz#677de069154a7485c2d25c577c02f624b85b85e8"
   dependencies:
@@ -882,7 +882,7 @@ brunch-skeletons@~0.1.4:
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/brunch-skeletons/-/brunch-skeletons-0.1.6.tgz#f15102a1b6babc964ce3d7e3c141dc0daa9d28ac"
 
-brunch@^2:
+brunch@^2.10.12:
   version "2.10.12"
   resolved "https://registry.yarnpkg.com/brunch/-/brunch-2.10.12.tgz#3aa0c515c216beb2e53a0c35a30546d0a04cee50"
   dependencies:

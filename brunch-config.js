@@ -12,11 +12,11 @@ exports.files = {
 exports.plugins = {
   babel: {presets: ['env']},
   uglify: {
-      mangle: false,
-      compress: {
-        global_defs: {
-          DEBUG: true
-        }
+    mangle: false,
+    compress: {
+      global_defs: {
+        DEBUG: false
       }
     }
+  }
 };
